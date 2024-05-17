@@ -11,6 +11,6 @@ public class Type {
 
     private Integer idType;
     private String name;
-    private  String description;
+    private String description;
 
 }

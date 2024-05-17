@@ -51,3 +51,7 @@ k
 ;src/main/java/com/svalero/webapppresencial/dao/TypeDao.java,8/0/80acf178d5709305a123d3af4d036824a006edef
 k
 ;src/main/java/com/svalero/webapppresencial/domain/Trip.java,6/1/61098446e6a8b4174ba0034e0c47a208bdbe6d67
+n
+>src/main/java/com/svalero/webapppresencial/dao/TripMapper.java,c/3/c3e923488682a6bc5dd4766dbfcb0a6ce9f9491a
+k
+;src/main/java/com/svalero/webapppresencial/dao/TripDao.java,5/5/5522bdf2f5a7263d9c7a5276834b8c0a0c2b905b

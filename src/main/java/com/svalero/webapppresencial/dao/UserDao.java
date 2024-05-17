@@ -14,13 +14,13 @@ public interface UserDao {
     @UseRowMapper(UserMapper.class)
     List<User> getAllUsers();
 
-    @SqlQuery("SELECT * FROM user WHERE email = ?")
+    @SqlQuery("SELECT * FROM user WHERE id_user = ?")
     @UseRowMapper(UserMapper.class)
-    User getNIF(String email);
+    User getNIF(Integer idUser);
 
     @SqlUpdate("INSERT INTO user (NIF, name, surname, email, address, country, mobile) VALUES (?,?,?,?,?,?,?)")
-    int addUser(String NIF, String name, String surname, String email, String address, String country, String mobile);
+    Integer addUser(String NIF, String name, String surname, String email, String address, String country, String mobile);
 
     @SqlUpdate("DELETE FROM user WHERE id_user = ?")
-    int removeUser(int id_user);
+    Integer removeUser(Integer idUser);
 }

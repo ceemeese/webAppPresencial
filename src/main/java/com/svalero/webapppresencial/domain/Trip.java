@@ -15,6 +15,8 @@ public class Trip {
     private String name;
     private String notes;
     private Date startDate;
-    private Date endDate
-
+    private Date endDate;
+    private Type idType;
+    private User idUser;
+    private Destination idDestination;
 }

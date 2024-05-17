@@ -13,13 +13,13 @@ public interface DestinationDao {
     @UseRowMapper(DestinationMapper.class)
     List<Destination> getAllDestinations();
 
-    @SqlQuery("SELECT * FROM destination WHERE country = ?")
+    @SqlQuery("SELECT * FROM destination WHERE id_destination = ?")
     @UseRowMapper(DestinationMapper.class)
-    Destination getIdDestination(String country);
+    Destination getDestination(Integer idDestination);
 
     @SqlUpdate("INSERT INTO destination (city, country, description) VALUES (?,?,?)")
-    int addDestination(String city, String country, String description);
+    Integer addDestination(String city, String country, String description);
 
     @SqlUpdate("DELETE FROM destination WHERE id_destination = ?")
-    int removeDestination(int idDestination);
+    Integer removeDestination(Integer idDestination);
 }
