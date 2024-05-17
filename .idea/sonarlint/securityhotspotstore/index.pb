@@ -29,3 +29,11 @@ I
 src/main/webapp/index.jsp,8/e/8e6d3b70c9f5b02570779b0441540d45eceb0ded
 S
 #src/main/webapp/includes/header.jsp,3/2/3200fcf4ffba49d05a166657dd0ccfb0a33363ac
+k
+;src/main/java/com/svalero/webapppresencial/domain/user.java,9/b/9b47e7d688e903265aa8b3af4179fbf7898d9efc
+n
+>src/main/java/com/svalero/webapppresencial/dao/UserMapper.java,5/9/595c363d10e7f9ac0e1a3ca211834a1e1d903c22
+k
+;src/main/java/com/svalero/webapppresencial/domain/User.java,2/e/2e0756242e6cf283c6091096efa84e2c7bf45e29
+k
+;src/main/java/com/svalero/webapppresencial/dao/UserDao.java,e/8/e8c924a44c44dc289ce0c38d9a2a419180b7838c
