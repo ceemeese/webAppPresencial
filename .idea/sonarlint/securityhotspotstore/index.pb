@@ -19,3 +19,13 @@ T
 $src/main/webapp/META-INF/context.xml,c/b/cbfb0d2e9b2b9fbf9d54374577c894a38643c6d0
 O
 src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+l
+<src/main/java/com/svalero/webapppresencial/dao/Database.java,c/a/ca273486b8682d25ed616d69e6cce86606e5e489
+n
+>src/main/java/com/svalero/webapppresencial/util/Constants.java,4/3/4384d2b2178793f52c37675c4696765c14790c95
+S
+#src/main/webapp/includes/footer.jsp,d/f/dfb9e48c6e21203c9b764af62788a42547c65e18
+I
+src/main/webapp/index.jsp,8/e/8e6d3b70c9f5b02570779b0441540d45eceb0ded
+S
+#src/main/webapp/includes/header.jsp,3/2/3200fcf4ffba49d05a166657dd0ccfb0a33363ac

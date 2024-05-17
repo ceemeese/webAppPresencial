@@ -20,7 +20,7 @@
     <nav class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/webapp">
-                Patitas y Bigotes
+                Gestor de Viajes
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,29 +28,28 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="edit-cat.jsp">Adopta</a>
+                        <a class="nav-link active" aria-current="page" href="edit-cat.jsp">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Quién somos</a>
+                        <a class="nav-link" href="">Viajes</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Ayúdanos
+                            Destinos
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Hazte Socio</a></li>
-                            <li><a class="dropdown-item" href="#">Hazte Voluntario</a></li>
-                            <li><a class="dropdown-item" href="#">Donativos</a></li>
+                            <li><a class="dropdown-item" href="#">Otros</a></li>
+                            <li><a class="dropdown-item" href="#">Otros</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="view-breeds.jsp">Razas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="view-adoptions.jsp">Adopciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="view-users.jsp">Usuarios</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tipo viajes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Otros</a></li>
+                            <li><a class="dropdown-item" href="#">Otros</a></li>
+                        </ul>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
