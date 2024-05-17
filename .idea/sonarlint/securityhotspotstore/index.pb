@@ -1,0 +1,21 @@
+
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+Y
+)src/main/webapppresencial/WEB-INF/web.xml,5/e/5eb49062a3e0c20e0f88032f64966731fa096240
+^
+.src/main/webapppresencial/META-INF/context.xml,8/6/864228af4d8d26419a52a41dac1650b7da135ac8
+S
+#src/main/webapppresencial/style.css,6/0/600db5c335143807f67a61e0df3c9c8599c5d0f3
+S
+#src/main/webapppresencial/script.js,7/6/76a3401ac2b42984eead7e0af86154641e0c853e
+S
+#src/main/webapppresencial/index.jsp,4/3/43f1a23ad6432d4b1770c3de3930f210295bb4ba
+Z
+*src/main/webapppresencial/WEB-INF/web2.xml,0/4/0487adbf3f76c0fb47884fc080cf54a263e8665c
+_
+/src/main/webapppresencial/META-INF/context2.xml,f/2/f2188c9c64bd99bd6b043593ad3d0955b906d933
+T
+$src/main/webapp/META-INF/context.xml,c/b/cbfb0d2e9b2b9fbf9d54374577c894a38643c6d0
+O
+src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
