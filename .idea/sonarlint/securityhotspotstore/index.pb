@@ -43,3 +43,11 @@ u
 Esrc/main/java/com/svalero/webapppresencial/dao/DestinationMapper.java,f/7/f7b21558545d18428a4338120f3be828f4b865ac
 r
 Bsrc/main/java/com/svalero/webapppresencial/dao/DestinationDao.java,6/e/6eb23eeaac3266aa4cba64db166cb4a63629dcb4
+k
+;src/main/java/com/svalero/webapppresencial/domain/Type.java,8/2/82a4e46a0ca2b1b3b1b235700c52ef4205a0e578
+n
+>src/main/java/com/svalero/webapppresencial/dao/TypeMapper.java,d/4/d489a738972d4e1db75b46174185c9a559391ef4
+k
+;src/main/java/com/svalero/webapppresencial/dao/TypeDao.java,8/0/80acf178d5709305a123d3af4d036824a006edef
+k
+;src/main/java/com/svalero/webapppresencial/domain/Trip.java,6/1/61098446e6a8b4174ba0034e0c47a208bdbe6d67
