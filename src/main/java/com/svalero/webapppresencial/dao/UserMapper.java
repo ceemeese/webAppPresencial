@@ -11,7 +11,8 @@ public class UserMapper implements RowMapper<User> {
 
     @Override
     public User map(ResultSet rs, StatementContext ctx) throws SQLException {
-        return new User(rs.getString("NIF"),
+        return new User(rs.getInt("id_user"),
+                rs.getString("NIF"),
                 rs.getString("name"),
                 rs.getString("surname"),
                 rs.getString("email"),

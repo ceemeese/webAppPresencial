@@ -37,3 +37,9 @@ k
 ;src/main/java/com/svalero/webapppresencial/domain/User.java,2/e/2e0756242e6cf283c6091096efa84e2c7bf45e29
 k
 ;src/main/java/com/svalero/webapppresencial/dao/UserDao.java,e/8/e8c924a44c44dc289ce0c38d9a2a419180b7838c
+r
+Bsrc/main/java/com/svalero/webapppresencial/domain/Destination.java,c/f/cf8221dacbdf50d9b9f947dda9aa47764c39808b
+u
+Esrc/main/java/com/svalero/webapppresencial/dao/DestinationMapper.java,f/7/f7b21558545d18428a4338120f3be828f4b865ac
+r
+Bsrc/main/java/com/svalero/webapppresencial/dao/DestinationDao.java,6/e/6eb23eeaac3266aa4cba64db166cb4a63629dcb4

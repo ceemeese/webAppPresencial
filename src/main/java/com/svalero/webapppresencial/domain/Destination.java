@@ -7,14 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Destination {
 
-    private Integer idUser;
-    private String NIF;
-    private String name;
-    private String surname;
-    private String email;
-    private String address;
+    private Integer idDestination;
+    private String city;
     private String country;
-    private String mobile;
+    private String description;
 }
