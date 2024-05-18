@@ -1,8 +1,7 @@
 package com.svalero.webapppresencial.servlet;
 
 import com.svalero.webapppresencial.dao.Database;
-import com.svalero.webapppresencial.dao.TripDao;
-import com.svalero.webapppresencial.util.DateUtils;
+import com.svalero.webapppresencial.dao.UserDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,11 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Date;
 import java.sql.SQLException;
 
-@WebServlet("/edit-trip")
-public class editTrip extends HttpServlet {
+@WebServlet("/edit-user")
+public class editUser extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
@@ -26,27 +24,29 @@ public class editTrip extends HttpServlet {
 
             //REVISAR POR QUE GENERA UNO NUEVO SI EDITAMOS
             int id = 0;
-            if (request.getParameter("id_trip") != null) {
-                id = Integer.parseInt(request.getParameter("id_trip"));
+            if (request.getParameter("id_user") != null) {
+                id = Integer.parseInt(request.getParameter("id_user"));
             }
 
+            String NIF = request.getParameter("NIF");
             String name = request.getParameter("name");
-            String notes= request.getParameter("notes");
-            Date start = DateUtils.parse(request.getParameter("start"));
-            Date end = DateUtils.parse(request.getParameter("end"));
-            Integer numberTraveller= Integer.parseInt(request.getParameter("numberTraveller"));
+            String surname = request.getParameter("surname");
+            String email = request.getParameter("email");
+            String address = request.getParameter("address");
+            String country = request.getParameter("country");
+            String mobile = request.getParameter("mobile");
 
             Database.connect();
             if ( id == 0) {
-                int affectedRows = Database.jdbi.withExtension(TripDao.class, dao -> dao.addTrip(name, notes, start, end,numberTraveller));
+                int affectedRows = Database.jdbi.withExtension(UserDao.class, dao -> dao.addUser( NIF, name, surname, email, address, country, mobile));
                 Database.close();
-                sendMessage("New trip added", response);
+                sendMessage("New user added", response);
             } else {
                 final int finalID = id;
-                int affectedRows = Database.jdbi.withExtension(TripDao.class,
-                        dao -> dao.updateTrip(name, notes, numberTraveller, finalID));
+                int affectedRows = Database.jdbi.withExtension(UserDao.class,
+                        dao -> dao.updateUser( NIF, name, surname, email, address, country, mobile, finalID));
                 Database.close();
-                sendMessage("Trip modified", response);
+                sendMessage("User modified", response);
             }
 
         } catch (ClassNotFoundException e) {
@@ -64,13 +64,13 @@ public class editTrip extends HttpServlet {
     private boolean hasValidationErrors(HttpServletRequest request, HttpServletResponse response) throws IOException {
         boolean hasErrors = false;
 
-        if (request.getParameter("name").isBlank()) {
-            sendError("Input name can't be empty", response);
+        if (request.getParameter("NIF").isBlank()) {
+            sendError("Input NIF can't be empty", response);
             hasErrors = true;
         }
 
-        if (request.getParameter("notes").isBlank()) {
-            sendError("Input description can't be empty", response);
+        if (request.getParameter("mobile").isBlank()) {
+            sendError("Input mobile can't be empty", response);
             hasErrors = true;
         }
 

@@ -1,7 +1,7 @@
 package com.svalero.webapppresencial.servlet;
 
 import com.svalero.webapppresencial.dao.Database;
-import com.svalero.webapppresencial.dao.DestinationDao;
+import com.svalero.webapppresencial.dao.UserDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,20 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/remove-destination")
-public class removeDestination extends HttpServlet {
+@WebServlet("/remove-user")
+public class removeUser extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        int idDestination = Integer.parseInt(request.getParameter("idDestination"));
+        int idUser = Integer.parseInt(request.getParameter("idUser"));
 
         try {
             Database.connect();
-            int affectedRows = Database.jdbi.withExtension(DestinationDao.class,
-                    dao -> dao.removeDestination(idDestination));
+            int affectedRows = Database.jdbi.withExtension(UserDao.class,
+                    dao -> dao.removeUser(idUser));
 
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("list-users.jsp");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {

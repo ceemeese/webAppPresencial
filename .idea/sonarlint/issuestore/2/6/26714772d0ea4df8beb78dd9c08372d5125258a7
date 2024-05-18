@@ -1,0 +1,11 @@
+
+”	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¡§šžúÿÿÿÿ8˜Þ¹ãø1J$46abc088-141a-4dc2-a84f-76a46cb44338
+ƒ
+java:S1854+"@Remove this useless assignment to local variable "affectedRows".(«Ñ¾¶8´Þ¹ãø1J$69f2e71d-71bd-4b32-87fc-f111de0f6022
+ƒ
+java:S18540"@Remove this useless assignment to local variable "affectedRows".( ¹Âï8´Þ¹ãø1J$1204aaab-0309-4258-b79c-44fc7b086926
+~	java:S125!"<This block of commented-out lines of code should be removed.(‚í§Ô8¶Þ¹ãø1J$95a25307-f13d-468e-bc8f-15b39420355f
+t
+java:S1481+"1Remove this unused "affectedRows" local variable.(«Ñ¾¶8·Þ¹ãø1J$35b91ef8-e009-4d2a-9ab2-bc6f5f95b354
+t
+java:S14810"1Remove this unused "affectedRows" local variable.( ¹Âï8¸Þ¹ãø1J$241a519f-4b1c-4fea-97ac-0e4078dcbd4c

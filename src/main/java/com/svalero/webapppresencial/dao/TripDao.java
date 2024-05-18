@@ -1,6 +1,7 @@
 package com.svalero.webapppresencial.dao;
 
 import com.svalero.webapppresencial.domain.Trip;
+import com.svalero.webapppresencial.domain.User;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.jdbi.v3.sqlobject.statement.UseRowMapper;
@@ -16,14 +17,15 @@ public interface TripDao {
 
     @SqlQuery("SELECT * FROM trip WHERE id_trip = ?")
     @UseRowMapper(TripMapper.class)
-    Trip getTrip(Integer id);
+    Trip getTrip(int id);
 
-    @SqlUpdate("INSERT INTO trip (name, notes, start_date, end_date, id_type, id_destination, number_traveller) VALUES (?,?,?,?,?,?,?)")
-    Integer addTrip(String name, String notes, Date start_date, Date end_date, Integer id_type, Integer id_user, Integer id_destination, Integer number_traveller);
+    @SqlUpdate("INSERT INTO trip (name, notes, start_date, end_date, number_traveller) VALUES (?,?,?,?,?)")
+    Integer addTrip(String name, String notes, Date start, Date end, Integer numberTraveller);
 
     @SqlUpdate("DELETE FROM trip WHERE id_trip = ?")
     Integer removeTrip(Integer idTrip);
 
-    @SqlUpdate("UPDATE trip SET name = ?, notes = ?, start_date = ?, end_date = ?, id_type = ?, id_destination = ?, number_traveller = ? WHERE id_trip = ?")
-    int updateTrip(String name, String notes, Date start_date, Date end_date, Integer id_type, Integer id_user, Integer id_destination, Integer number_traveller, int id_trip);
+    @SqlUpdate("UPDATE trip SET name = ?, notes = ?, start_date = ?, end_date = ?,number_traveller = ? WHERE id_trip = ?")
+    int updateTrip(String name, String notes, Integer numberTraveller, int idTrip);
+
 }

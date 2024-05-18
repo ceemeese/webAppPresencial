@@ -1,7 +1,7 @@
 package com.svalero.webapppresencial.servlet;
 
 import com.svalero.webapppresencial.dao.Database;
-import com.svalero.webapppresencial.dao.DestinationDao;
+import com.svalero.webapppresencial.dao.TypeDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,20 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/remove-destination")
-public class removeDestination extends HttpServlet {
+@WebServlet("/remove-type")
+public class removeType extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        int idDestination = Integer.parseInt(request.getParameter("idDestination"));
+        int idType = Integer.parseInt(request.getParameter("idType"));
 
         try {
             Database.connect();
-            int affectedRows = Database.jdbi.withExtension(DestinationDao.class,
-                    dao -> dao.removeDestination(idDestination));
+            int affectedRows = Database.jdbi.withExtension(TypeDao.class,
+                    dao -> dao.removeType(idType));
 
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("list-type.jsp");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {

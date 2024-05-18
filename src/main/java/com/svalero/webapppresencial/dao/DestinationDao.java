@@ -21,8 +21,8 @@ public interface DestinationDao {
     Integer addDestination(String city, String country, String description);
 
     @SqlUpdate("UPDATE destination SET city = ?, country = ?, description = ? WHERE id_destination = ?")
-    int updateDestination(String city, String country, String description, int id_destination);
+    int updateDestination(String city, String country, String description, int idDestination);
 
     @SqlUpdate("DELETE FROM destination WHERE id_destination = ?")
-    Integer removeDestination(Integer idDestination);
+    Integer removeDestination(int idDestination);
 }

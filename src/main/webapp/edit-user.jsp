@@ -1,3 +1,6 @@
+<%@ page import="com.svalero.webapppresencial.domain.User" %>
+<%@ page import="com.svalero.webapppresencial.dao.Database" %>
+<%@ page import="com.svalero.webapppresencial.dao.UserDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="includes/header.jsp"%>
@@ -7,13 +10,24 @@
         $("form").on("submit", function(event) {
             event.preventDefault();
             var formValue = $(this).serialize();
-            $.post("edit-client", formValue, function(data) {
+            $.post("edit-user", formValue, function(data) {
                 $("#result").html(data);
             });
         });
     });
 </script>
 
+<%
+    int id;
+    User user = null;
+    if (request.getParameter("id") == null) {
+        id = 0;
+    } else {
+        id = Integer.parseInt(request.getParameter("id"));
+        Database.connect();
+        user = Database.jdbi.withExtension(UserDao.class, dao-> dao.getUser(id));
+    }
+%>
 
 
 <main>
@@ -25,8 +39,8 @@
         <form class="" action="" method="post" content="text/html" enctype="multipart/form-data" >
             <div class="row">
                 <div class="form-group col-md-4">
-                    <label class="form-label" for="nif">NIF</label>
-                    <input type="text" name="nif" class="form-control" id="nif" placeholder="NIF">
+                    <label class="form-label" for="NIF">NIF</label>
+                    <input type="text" name="NIF" class="form-control" id="NIF" placeholder="NIF">
                 </div>
                 <div class="form-group col-md-4">
                     <label class="form-label" for="name">Name</label>

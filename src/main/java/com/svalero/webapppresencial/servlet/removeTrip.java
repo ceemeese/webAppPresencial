@@ -1,7 +1,7 @@
 package com.svalero.webapppresencial.servlet;
 
 import com.svalero.webapppresencial.dao.Database;
-import com.svalero.webapppresencial.dao.DestinationDao;
+import com.svalero.webapppresencial.dao.TripDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,20 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/remove-destination")
-public class removeDestination extends HttpServlet {
+@WebServlet("/remove-trip")
+public class removeTrip extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        int idDestination = Integer.parseInt(request.getParameter("idDestination"));
+        int idTrip = Integer.parseInt(request.getParameter("idTrip"));
 
         try {
             Database.connect();
-            int affectedRows = Database.jdbi.withExtension(DestinationDao.class,
-                    dao -> dao.removeDestination(idDestination));
+            int affectedRows = Database.jdbi.withExtension(TripDao.class,
+                    dao -> dao.removeTrip(idTrip));
 
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("list-trips.jsp");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
