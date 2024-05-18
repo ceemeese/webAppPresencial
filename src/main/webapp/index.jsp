@@ -7,7 +7,7 @@
                 <h1 class="fw-light">Travel Manager</h1>
                 <p class="lead text-body-secondary">An efficient travel manager can transform any business trip into an organized and stress-free experience.</p>
                 <p>
-                    <a href="" class="btn btn-success my-2">Add Destination</a>
+                    <a href="edit-destination.jsp" class="btn btn-success my-2">Add Destination</a>
                 </p>
             </div>
         </div>

@@ -79,3 +79,9 @@ O
 src/main/webapp/edit-client.jsp,c/6/c6941fbd9e9511abb787940f4494abdc13c27c2b
 M
 src/main/webapp/edit-trip.jsp,4/1/41392f9c10ca614f4836b5bd501ca068c5b5be3d
+M
+src/main/webapp/edit-type.jsp,9/8/98bf1b5c48a762cb6002323dedd26b4cf0a43933
+M
+src/main/webapp/list-type.jsp,a/f/aff79c19b1e7e33b973c2f7b3d2228ece2b3a9cf
+w
+Gsrc/main/java/com/svalero/webapppresencial/servlet/editDestination.java,f/6/f648994c068c9dbc8d14fce4d6f7b1513e12244a
