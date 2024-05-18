@@ -37,7 +37,7 @@
               <td><%= trip.getIdType().getName() %></td>
               <td><a href="view-trip.jsp?idTrip=<%= trip.getIdTrip()%>" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
                 <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modify</a>
-                <a href="" type="button" class="btn btn-sm btn-outline-danger">X</a>
+                <a href="remove-trip?idTrip=<%= trip.getIdTrip()%>" type="button" class="btn btn-sm btn-outline-danger">X</a>
               </td>
             </tr>
             <%

@@ -1,11 +1,9 @@
-<%@ page import="com.svalero.webapppresencial.dao.Database" %>
 <%@ page import="com.svalero.webapppresencial.domain.User" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.svalero.webapppresencial.dao.UserDao" %>
 <%@ page import="com.svalero.webapppresencial.domain.Type" %>
-<%@ page import="com.svalero.webapppresencial.dao.TypeDao" %>
 <%@ page import="com.svalero.webapppresencial.domain.Destination" %>
-<%@ page import="com.svalero.webapppresencial.dao.DestinationDao" %>
+<%@ page import="com.svalero.webapppresencial.domain.Trip" %>
+<%@ page import="com.svalero.webapppresencial.dao.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="includes/header.jsp"%>
@@ -22,6 +20,18 @@
     });
 </script>
 
+<%
+    int id;
+    Trip trip = null;
+    if (request.getParameter("id") == null) {
+        id = 0;
+    } else {
+        id = Integer.parseInt(request.getParameter("id"));
+        Database.connect();
+        trip = Database.jdbi.withExtension(TripDao.class, dao-> dao.getTrip(id));
+    }
+%>
+
 
 
 <main>
@@ -37,8 +47,8 @@
                     <input type="text" name="name" class="form-control" id="name" placeholder="name">
                 </div>
                 <div class="form-group col-md-6" >
-                    <label class="form-label" for="client">Client</label>
-                    <select id="client" name="client" class="form-control">
+                    <label class="form-label" for="user">Client</label>
+                    <select id="user" name="user" class="form-control">
 
                         <%
                             Database.connect();
@@ -58,6 +68,7 @@
                 <label class="form-label" for="notes">Notes</label>
                 <textarea class="form-control" name="notes" id="notes" rows="3"></textarea>
             </div>
+
             <div class="row mt-1">
                 <div class="form-group col-md-6">
                     <label for="dateStart" class="form-label">Start Date</label>
@@ -68,6 +79,7 @@
                     <input type="date" name="dateEnd" class="form-control" id="dateEnd" placeholder="dd/mm/yyyy">
                 </div>
             </div>
+
             <div class="row mt-1">
                 <div class="form-group col-md-6">
                     <label class="form-label" for="typeTrip">Type Trip</label>
@@ -103,9 +115,11 @@
 
                     </select>
                 </div>
+                <div class="form-group mt-1">
+                    <label class="form-label" for="numberTraveller">Number of travellers</label>
+                    <input type="text" name="numberTraveller" class="form-control" id="numberTraveller">
+                </div>
             </div>
-
-
 
 
             <button type="submit" class="btn btn-success mt-3">Submit</button>

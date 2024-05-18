@@ -32,7 +32,7 @@
               <td> <%= type.getName() %></td>
               <td> <%= type.getDescription() %> </td>
               <td>
-                <a href="" type="button" class="btn btn-sm btn-outline-danger">X</a>
+                <a href="remove-type?idType=<%= type.getIdType()%>" type="button" class="btn btn-sm btn-outline-danger">X</a>
               </td>
             </tr>
             <%

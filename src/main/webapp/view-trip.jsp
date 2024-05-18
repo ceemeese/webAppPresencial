@@ -42,7 +42,7 @@
                                        <p class="card-text mb-1"><strong>Notes: </strong> <%= trip.getNotes() %> </p>
                                    </div>
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-2">Delete</button>
+                                        <a href="remove-trip?idTrip=<%= trip.getIdTrip()%>" type="button" class="btn btn-sm btn-outline-danger">Delete</a>
                                     </div>
                                 </div>
                             </div>

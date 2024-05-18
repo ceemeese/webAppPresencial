@@ -101,3 +101,5 @@ M
 src/main/webapp/edit-user.jsp,d/0/d0d7bbb18ddb7e5ecd570823495f3541ddd728e6
 r
 Bsrc/main/java/com/svalero/webapppresencial/servlet/removeTrip.java,b/f/bf6004230e7a3150f7e441f874776ff68819fc04
+r
+Bsrc/main/java/com/svalero/webapppresencial/servlet/removeType.java,a/9/a9bec2b83e47695d6db1cead90c8345ff9685bfb
