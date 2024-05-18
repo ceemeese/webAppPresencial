@@ -93,3 +93,11 @@ n
 >src/main/java/com/svalero/webapppresencial/util/DateUtils.java,3/5/35cc94408bce94d2dd8860c503d2b830c6eb88a6
 y
 Isrc/main/java/com/svalero/webapppresencial/servlet/removeDestination.java,f/a/fa9a96ae99be1d88e17c07f5dc03fc9840ad3953
+r
+Bsrc/main/java/com/svalero/webapppresencial/servlet/removeUser.java,3/4/34e1429d25dc511d0b5f0f1a2e7893d52378e31a
+p
+@src/main/java/com/svalero/webapppresencial/servlet/editUser.java,b/8/b85de5d692e1f89b614212f0e02e87f19108fdb4
+M
+src/main/webapp/edit-user.jsp,d/0/d0d7bbb18ddb7e5ecd570823495f3541ddd728e6
+r
+Bsrc/main/java/com/svalero/webapppresencial/servlet/removeTrip.java,b/f/bf6004230e7a3150f7e441f874776ff68819fc04

@@ -21,6 +21,10 @@ public interface UserDao {
     @SqlUpdate("INSERT INTO user (NIF, name, surname, email, address, country, mobile) VALUES (?,?,?,?,?,?,?)")
     Integer addUser(String NIF, String name, String surname, String email, String address, String country, String mobile);
 
+    @SqlUpdate("UPDATE user SET NIF = ?, name = ?, surname = ?, email = ?, address = ?, country = ?, mobile = ? WHERE id_user = ?")
+    int updateUser(String NIF, String name, String surname, String email, String address, String country, String mobile, int idUser);
+
     @SqlUpdate("DELETE FROM user WHERE id_user = ?")
-    Integer removeUser(Integer idUser);
+    Integer removeUser(int idUser);
+
 }
