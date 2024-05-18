@@ -1,7 +1,7 @@
 package com.svalero.webapppresencial.util;
 
 public class Constants {
-    public static final String DATABASE = "webapp";
+    public static final String DATABASE = "webapppresencial";
     public static final String USERNAME = "root";
     public static final String PASSWORD = "SANVALERO";
 

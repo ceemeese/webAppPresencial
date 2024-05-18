@@ -1,3 +1,7 @@
+<%@ page import="com.svalero.webapppresencial.dao.Database" %>
+<%@ page import="com.svalero.webapppresencial.domain.Type" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.svalero.webapppresencial.dao.TypeDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="includes/header.jsp"%>
@@ -18,15 +22,22 @@
             </tr>
         </thead>
         <tbody>
+            <%
+                Database.connect();
+                List<Type> types = Database.jdbi.withExtension(TypeDao.class, TypeDao::getAllTypes);
+                for (Type type : types) {
+            %>
             <tr>
-              <td> </td>
-              <td> </td>
-              <td> </td>
+              <td> <%= type.getIdType() %></td>
+              <td> <%= type.getName() %></td>
+              <td> <%= type.getDescription() %> </td>
               <td>
-                <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modify</a>
                 <a href="" type="button" class="btn btn-sm btn-outline-danger">X</a>
               </td>
             </tr>
+            <%
+                }
+            %>
           </tbody>
       </table>
 

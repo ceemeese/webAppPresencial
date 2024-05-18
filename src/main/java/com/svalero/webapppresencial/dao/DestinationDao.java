@@ -15,10 +15,13 @@ public interface DestinationDao {
 
     @SqlQuery("SELECT * FROM destination WHERE id_destination = ?")
     @UseRowMapper(DestinationMapper.class)
-    Destination getDestination(Integer idDestination);
+    Destination getDestination(Integer id);
 
     @SqlUpdate("INSERT INTO destination (city, country, description) VALUES (?,?,?)")
     Integer addDestination(String city, String country, String description);
+
+    @SqlUpdate("UPDATE destination SET city = ?, country = ?, description = ? WHERE id_destination = ?")
+    int updateDestination(String city, String country, String description, int id_destination);
 
     @SqlUpdate("DELETE FROM destination WHERE id_destination = ?")
     Integer removeDestination(Integer idDestination);

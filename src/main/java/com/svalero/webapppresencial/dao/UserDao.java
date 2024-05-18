@@ -16,7 +16,7 @@ public interface UserDao {
 
     @SqlQuery("SELECT * FROM user WHERE id_user = ?")
     @UseRowMapper(UserMapper.class)
-    User getNIF(Integer idUser);
+    User getUser(Integer id);
 
     @SqlUpdate("INSERT INTO user (NIF, name, surname, email, address, country, mobile) VALUES (?,?,?,?,?,?,?)")
     Integer addUser(String NIF, String name, String surname, String email, String address, String country, String mobile);

@@ -1,4 +1,6 @@
-
+<%@ page import="com.svalero.webapppresencial.domain.Destination" %>
+<%@ page import="com.svalero.webapppresencial.dao.Database" %>
+<%@ page import="com.svalero.webapppresencial.dao.DestinationDao" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -9,7 +11,7 @@
         $("form").on("submit", function(event) {
             event.preventDefault();
             var formValue = $(this).serialize();
-            $.post("edit-breed", formValue, function(data) {
+            $.post("edit-destination", formValue, function(data) {
                 $("#result").html(data);
             });
         });
@@ -17,7 +19,15 @@
 </script>
 
 <%
-
+    int id;
+    Destination destination = null;
+    if (request.getParameter("id") == null) {
+        id = 0;
+    } else {
+        id = Integer.parseInt(request.getParameter("id"));
+        Database.connect();
+        destination = Database.jdbi.withExtension(DestinationDao.class, dao-> dao.getDestination(id));
+    }
 %>
 
 <main>
