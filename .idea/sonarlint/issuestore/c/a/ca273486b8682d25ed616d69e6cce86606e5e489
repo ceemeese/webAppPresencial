@@ -1,0 +1,15 @@
+
+‘
+java:S1104"PMake jdbi a static final constant or non-public and provide accessors if needed.(Õö—›şÿÿÿÿJ$b3eab8d4-d699-4704-99f6-da26710a8689
+
+java:S1104"NMake db a static final constant or non-public and provide accessors if needed.(­Ù‹æıÿÿÿÿJ$7b36f3be-08bc-4416-b035-2ac546ddebf8
+k
+java:S1444"*Make this "public static jdbi" field final(Õö—›şÿÿÿÿJ$7b452b70-f038-449e-8cf6-12863890c116
+i
+java:S1444"(Make this "public static db" field final(­Ù‹æıÿÿÿÿJ$405adf2d-3a74-45e4-b8db-ac124fb08cf4
+{
+java:S1118":Add a private constructor to hide the implicit public one.(Ñ°Ù®şÿÿÿÿJ$ea03668d-2206-40a5-8a97-0cd55e9736f8
+¯
+java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(şĞùÿÿÿÿÿJ$ab8ca8ab-62e1-42c9-8666-8720e06b24b8
+ª
+java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(‘±øŸJ$cfea5988-3d1f-46d8-9aed-2b6afa7baadc

@@ -1,0 +1,12 @@
+
+”	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Î—¯¨ıÿÿÿÿ8‚Û»Ùø1J$bd581edd-289c-4ef6-bf50-7b2c53826f43
+ƒ
+java:S1854&"@Remove this useless assignment to local variable "affectedRows".(±¯ÚĞ8™¼Ùø1J$4843ac10-3c70-4f41-9cfc-38277e455177
+‚
+java:S1854+"@Remove this useless assignment to local variable "affectedRows".(ÿ•úR8á™¾Ùø1J$4507c650-b8e4-48e6-a567-e3cb59e5000e
+t
+java:S1481&"1Remove this unused "affectedRows" local variable.(±¯ÚĞ8›¼Ùø1J$b9f182e6-70e2-476c-befa-5fdfa6c8d5c9
+s
+java:S1481+"1Remove this unused "affectedRows" local variable.(ÿ•úR8ä™¾Ùø1J$b217697c-1a84-43ba-aa0f-dda383f84ae9
+
+java:S1128"LRemove this unused import 'com.svalero.webapppresencial.domain.Destination'.(ÃÛ¼8à©½Üø1J$13b4698b-b259-4a12-8ded-24e232c0ab2d
