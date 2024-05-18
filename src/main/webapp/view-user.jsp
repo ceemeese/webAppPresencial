@@ -1,3 +1,6 @@
+<%@ page import="com.svalero.webapppresencial.dao.Database" %>
+<%@ page import="com.svalero.webapppresencial.domain.User" %>
+<%@ page import="com.svalero.webapppresencial.dao.UserDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="includes/header.jsp"%>
@@ -7,45 +10,31 @@
     <section class="py-5 text-center container">
         <h1>User</h1>
     </section>
+    
+    <%
+        Integer idUser = Integer.parseInt(request.getParameter("idUser"));
 
+        Database.connect();
+        User user = Database.jdbi.withExtension(UserDao.class, dao-> dao.getUser(idUser));
+    %>
 
+    <div class="container">
+        <div id="cardID" class="card" style="width: 20rem;">
+            <h4 class="card-header text-center"> Personal information </h4>
+            <div class="card-body">
+                <h5 class="text-center"></h5>
+                <p class="card-text"> <strong>NIF: </strong> <%= user.getNIF() %></p>
+                <p class="card-text"> <strong>Name: </strong> <%= user.getName() %></p>
+                <p class="card-text"> <strong>Surname: </strong> <%= user.getSurname() %></p>
+                <p class="card-text"> <strong>Email: </strong> <%= user.getEmail() %></p>
+                <p class="card-text"> <strong>Country: </strong> <%= user.getCountry() %></p>
+                <p class="card-text"> <strong>Address: </strong> <%= user.getAddress() %></p>
+                <p class="card-text"> <strong>Mobile: </strong> <%= user.getMobile() %></p>
 
-
-    <div class="cream-bg">
-        <div class="container">
-            <div class="row g-5 justify-content-evenly">
-                <div class="col lg-6">
-                    <div class="card">
-                        <div class="row g-0">
-                            <div class="col-6 col-md-5">
-                                <img class="card-img img-fluid rounded-start" src="trip-mediano.jpg" alt="trip">
-                            </div>
-                            <div class="col-6 col-md-7">
-                                <div class="card-body d-flex flex-column">
-                                   <div class="h-100">
-                                       <h3 class="card-title">   HOLA </h3>
-                                       <h2 class="card-title"> QUE TAL </h2>
-                                       <p class="card-text mb-1"><strong>NIF: </strong> </p>
-                                       <p class="card-text mb-1"><strong>Name: </strong>   </p>
-                                       <p class="card-text mb-1"><strong>Surname: </strong> </p>
-                                       <p class="card-text mb-1"><strong>Email: </strong> </p>
-                                       <p class="card-text mb-1"><strong>Country: </strong> </p>
-                                       <p class="card-text mb-1"><strong>Address: </strong> </p>
-                                       <p class="card-text mb-1"><strong>Mobile: </strong> </p>
-                                   </div>
-                                    <div>
-                                        <button type="button" class="btn btn-danger">Delete</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <a href="edit-client.jsp" class="btn btn-primary">Modificar</a>
             </div>
         </div>
     </div>
-</main>
-
 
 <%@include file="includes/footer.jsp"%>
 

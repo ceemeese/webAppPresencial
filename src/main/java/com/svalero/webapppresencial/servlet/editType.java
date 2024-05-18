@@ -1,8 +1,7 @@
 package com.svalero.webapppresencial.servlet;
 
-import com.svalero.webapppresencial.dao.DestinationDao;
 import com.svalero.webapppresencial.dao.Database;
-import com.svalero.webapppresencial.domain.Destination;
+import com.svalero.webapppresencial.dao.TypeDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet("/edit-destination")
-public class editDestination extends HttpServlet {
+@WebServlet("/edit-type")
+public class editType extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
@@ -25,25 +24,24 @@ public class editDestination extends HttpServlet {
 
             //REVISAR POR QUE GENERA UNO NUEVO SI EDITAMOS
             int id = 0;
-            if (request.getParameter("id_destination") != null) {
-                id = Integer.parseInt(request.getParameter("id_destination"));
+            if (request.getParameter("id_type") != null) {
+                id = Integer.parseInt(request.getParameter("id_type"));
             }
 
-            String city = request.getParameter("city");
-            String country = request.getParameter("country");
+            String name = request.getParameter("name");
             String description = request.getParameter("description");
 
             Database.connect();
             if ( id == 0) {
-                int affectedRows = Database.jdbi.withExtension(DestinationDao.class, dao -> dao.addDestination(city, country, description));
+                int affectedRows = Database.jdbi.withExtension(TypeDao.class, dao -> dao.addType(name, description));
                 Database.close();
-                sendMessage("New destination added", response);
+                sendMessage("New type added", response);
             } else {
                 final int finalID = id;
-                int affectedRows = Database.jdbi.withExtension(DestinationDao.class,
-                        dao -> dao.updateDestination(city, country, description, finalID));
+                int affectedRows = Database.jdbi.withExtension(TypeDao.class,
+                        dao -> dao.updateType(name, description, finalID));
                 Database.close();
-                sendMessage("Destination Modified", response);
+                sendMessage("Type modified", response);
             }
 
         } catch (ClassNotFoundException e) {
@@ -61,13 +59,13 @@ public class editDestination extends HttpServlet {
     private boolean hasValidationErrors(HttpServletRequest request, HttpServletResponse response) throws IOException {
         boolean hasErrors = false;
 
-        if (request.getParameter("city").isBlank()) {
-            sendError("Input city can't be empty", response);
+        if (request.getParameter("name").isBlank()) {
+            sendError("Input name can't be empty", response);
             hasErrors = true;
         }
 
-        if (request.getParameter("country").isBlank()) {
-            sendError("Input country can't be empty", response);
+        if (request.getParameter("description").isBlank()) {
+            sendError("Input description can't be empty", response);
             hasErrors = true;
         }
 

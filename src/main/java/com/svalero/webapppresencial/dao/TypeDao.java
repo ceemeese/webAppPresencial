@@ -23,4 +23,7 @@ public interface TypeDao {
     @SqlUpdate("DELETE FROM type WHERE id_type = ?")
     Integer removeType(Integer idType);
 
+    @SqlUpdate("UPDATE type SET name = ?, description = ? WHERE id_type = ?")
+    int updateType(String name, String description, int id_type);
+
 }

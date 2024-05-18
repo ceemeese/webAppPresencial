@@ -35,7 +35,7 @@
               <td> <%= user.getName() %> </td>
               <td> <%= user.getSurname() %></td>
               <td> <%= user.getCountry() %></td>
-              <td><a href="view-user.jsp" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
+              <td><a href="view-user.jsp?idUser=<%= user.getIdUser()%>" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
                 <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modify</a>
                 <a href="" type="button" class="btn btn-sm btn-outline-danger">X</a>
               </td>

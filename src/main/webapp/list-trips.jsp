@@ -35,7 +35,7 @@
               <td><%= trip.getEndDate() %></td>
               <td><%= trip.getIdUser().getName() %> <%= trip.getIdUser().getSurname() %></td>
               <td><%= trip.getIdType().getName() %></td>
-              <td><a href="view-trip.jsp" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
+              <td><a href="view-trip.jsp?idTrip=<%= trip.getIdTrip()%>" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
                 <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modify</a>
                 <a href="" type="button" class="btn btn-sm btn-outline-danger">X</a>
               </td>

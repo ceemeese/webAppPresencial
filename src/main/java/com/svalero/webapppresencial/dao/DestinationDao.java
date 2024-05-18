@@ -15,7 +15,7 @@ public interface DestinationDao {
 
     @SqlQuery("SELECT * FROM destination WHERE id_destination = ?")
     @UseRowMapper(DestinationMapper.class)
-    Destination getDestination(Integer id);
+    Destination getDestination(Integer idDestination);
 
     @SqlUpdate("INSERT INTO destination (city, country, description) VALUES (?,?,?)")
     Integer addDestination(String city, String country, String description);

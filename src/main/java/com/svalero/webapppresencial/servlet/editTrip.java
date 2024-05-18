@@ -1,8 +1,8 @@
 package com.svalero.webapppresencial.servlet;
 
-import com.svalero.webapppresencial.dao.DestinationDao;
 import com.svalero.webapppresencial.dao.Database;
-import com.svalero.webapppresencial.domain.Destination;
+import com.svalero.webapppresencial.dao.TripDao;
+import com.svalero.webapppresencial.util.DateUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,10 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.SQLException;
 
-@WebServlet("/edit-destination")
-public class editDestination extends HttpServlet {
+@WebServlet("/edit-trip")
+public class editTrip extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
@@ -25,25 +26,30 @@ public class editDestination extends HttpServlet {
 
             //REVISAR POR QUE GENERA UNO NUEVO SI EDITAMOS
             int id = 0;
-            if (request.getParameter("id_destination") != null) {
-                id = Integer.parseInt(request.getParameter("id_destination"));
+            if (request.getParameter("id_trip") != null) {
+                id = Integer.parseInt(request.getParameter("id_trip"));
             }
 
-            String city = request.getParameter("city");
-            String country = request.getParameter("country");
-            String description = request.getParameter("description");
+            String name = request.getParameter("name");
+            String notes = request.getParameter("notes");
+            Date startDate = DateUtils.parse(request.getParameter("start_date"));
+            Date endDate = DateUtils.parse(request.getParameter("end_date"));
+            Integer idType = Integer.parseInt(request.getParameter("id_type"));
+            Integer idUser = Integer.parseInt(request.getParameter("id_user"));
+            Integer idDestination = Integer.parseInt(request.getParameter("id_destination"));
+            Integer numberTraveller = Integer.parseInt(request.getParameter("number_traveller"));
 
             Database.connect();
             if ( id == 0) {
-                int affectedRows = Database.jdbi.withExtension(DestinationDao.class, dao -> dao.addDestination(city, country, description));
+                int affectedRows = Database.jdbi.withExtension(TripDao.class, dao -> dao.addTrip(name, notes, startDate, endDate, idType, idUser, idDestination, numberTraveller));
                 Database.close();
-                sendMessage("New destination added", response);
+                sendMessage("New trip added", response);
             } else {
                 final int finalID = id;
-                int affectedRows = Database.jdbi.withExtension(DestinationDao.class,
-                        dao -> dao.updateDestination(city, country, description, finalID));
+                int affectedRows = Database.jdbi.withExtension(TripDao.class,
+                        dao -> dao.updateTrip(name, notes, startDate, endDate, idType, idUser, idDestination, numberTraveller, finalID));
                 Database.close();
-                sendMessage("Destination Modified", response);
+                sendMessage("Trip modified", response);
             }
 
         } catch (ClassNotFoundException e) {
@@ -61,16 +67,15 @@ public class editDestination extends HttpServlet {
     private boolean hasValidationErrors(HttpServletRequest request, HttpServletResponse response) throws IOException {
         boolean hasErrors = false;
 
-        if (request.getParameter("city").isBlank()) {
-            sendError("Input city can't be empty", response);
+        if (request.getParameter("name").isBlank()) {
+            sendError("Input name can't be empty", response);
             hasErrors = true;
         }
 
-        if (request.getParameter("country").isBlank()) {
-            sendError("Input country can't be empty", response);
+        if (request.getParameter("id_user").isBlank()) {
+            sendError("Input user can't be empty", response);
             hasErrors = true;
         }
-
         return hasErrors;
     }
 
