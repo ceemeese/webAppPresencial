@@ -39,6 +39,7 @@
                                        <p class="card-text mb-1"><strong>Description: </strong> <%= destination.getDescription() %>  </p>
                                         <div>
                                             <button type="button" class="btn btn-danger">Delete</button>
+                                            <a href="remove-destination?idDestination=<%= destination.getIdDestination()%>" type="button" class="btn btn-sm btn-outline-danger">Delete</a>
                                         </div>
                                 </div>
                             </div>

@@ -31,7 +31,8 @@
                 <p class="card-text"> <strong>Address: </strong> <%= user.getAddress() %></p>
                 <p class="card-text"> <strong>Mobile: </strong> <%= user.getMobile() %></p>
 
-                <a href="edit-client.jsp" class="btn btn-primary">Modificar</a>
+                <a href="edit-client.jsp" class="btn btn-primary">Modify</a>
+                <a href="" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>

@@ -41,7 +41,7 @@
                                     <div class="btn-group">
                                         <a href="view-destination.jsp?idDestination=<%= destination.getIdDestination()%>" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
                                         <a href="edit-destination.jsp?idDestination=<%= destination.getIdDestination()%>" type="button" class="btn btn-sm btn-outline-secondary">Modify</a>
-                                        <a href="" type="button" class="btn btn-sm btn-outline-danger">Delete</a>
+                                        <a href="remove-destination?idDestination=<%= destination.getIdDestination()%>" type="button" class="btn btn-sm btn-outline-danger">Delete</a>
                                     </div>
                                     <small class="text-body-secondary"> </small>
                                 </div>
