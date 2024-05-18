@@ -1,15 +1,15 @@
 
 ‘
-java:S1104"PMake jdbi a static final constant or non-public and provide accessors if needed.(Õö—›şÿÿÿÿJ$e5ef1b76-bf4e-4257-a22c-bd6b63dbd6b8
+java:S1104"PMake jdbi a static final constant or non-public and provide accessors if needed.(Õö—›şÿÿÿÿJ$b3eab8d4-d699-4704-99f6-da26710a8689
 
-java:S1104"NMake db a static final constant or non-public and provide accessors if needed.(­Ù‹æıÿÿÿÿJ$14e9284a-7d6e-458c-a89a-c12ed8943461
+java:S1104"NMake db a static final constant or non-public and provide accessors if needed.(­Ù‹æıÿÿÿÿJ$7b36f3be-08bc-4416-b035-2ac546ddebf8
 k
-java:S1444"*Make this "public static jdbi" field final(Õö—›şÿÿÿÿJ$4a9ab1c7-fc82-45e4-bb3b-0e8fdde84958
+java:S1444"*Make this "public static jdbi" field final(Õö—›şÿÿÿÿJ$7b452b70-f038-449e-8cf6-12863890c116
 i
-java:S1444"(Make this "public static db" field final(­Ù‹æıÿÿÿÿJ$08e230bc-6070-43ee-9ace-0832b81a213f
+java:S1444"(Make this "public static db" field final(­Ù‹æıÿÿÿÿJ$405adf2d-3a74-45e4-b8db-ac124fb08cf4
 {
-java:S1118":Add a private constructor to hide the implicit public one.(Ñ°Ù®şÿÿÿÿJ$945eb3f9-f105-4383-8ee8-744ffb35268a
+java:S1118":Add a private constructor to hide the implicit public one.(Ñ°Ù®şÿÿÿÿJ$ea03668d-2206-40a5-8a97-0cd55e9736f8
 ¯
-java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(şĞùÿÿÿÿÿJ$c4119d34-91f2-4cdf-9b1a-b702cf01e604
+java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(şĞùÿÿÿÿÿJ$ab8ca8ab-62e1-42c9-8666-8720e06b24b8
 ª
-java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(‘±øŸJ$9c555cc2-ce0c-4328-bdaf-a9cdacfab7de
+java:S1130"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(‘±øŸJ$cfea5988-3d1f-46d8-9aed-2b6afa7baadc

@@ -1,3 +1,7 @@
+<%@ page import="com.svalero.webapppresencial.dao.Database" %>
+<%@ page import="com.svalero.webapppresencial.domain.User" %>
+<%@ page import="com.svalero.webapppresencial.dao.UserDao" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="includes/header.jsp"%>
@@ -18,17 +22,27 @@
               <th></th>
             </tr>
         </thead>
+
+         <%
+             Database.connect();
+             List<User> users = Database.jdbi.withExtension(UserDao.class, UserDao::getAllUsers);
+             for (User user : users) {
+         %>
+
         <tbody>
             <tr>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td> </td>
-              <td><a href="view-user.jsp" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
+                <td> <%= user.getIdUser() %> </td>
+              <td> <%= user.getName() %> </td>
+              <td> <%= user.getSurname() %></td>
+              <td> <%= user.getCountry() %></td>
+              <td><a href="view-user.jsp?idUser=<%= user.getIdUser()%>" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
                 <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modify</a>
                 <a href="" type="button" class="btn btn-sm btn-outline-danger">X</a>
               </td>
             </tr>
+            <%
+                }
+            %>
           </tbody>
       </table>
 

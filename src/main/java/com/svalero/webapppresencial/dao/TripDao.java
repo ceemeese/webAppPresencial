@@ -16,11 +16,14 @@ public interface TripDao {
 
     @SqlQuery("SELECT * FROM trip WHERE id_trip = ?")
     @UseRowMapper(TripMapper.class)
-    Trip getTrip(String idTrip);
+    Trip getTrip(Integer id);
 
-    @SqlUpdate("INSERT INTO trip (name, surname, email, address, country, mobile) VALUES (?,?,?,?,?,?)")
-    Integer addTrip(String name, String notes, Date start_date, Date end_date, Integer id_type, Integer id_user, Integer id_destination);
+    @SqlUpdate("INSERT INTO trip (name, notes, start_date, end_date, id_type, id_destination, number_traveller) VALUES (?,?,?,?,?,?,?)")
+    Integer addTrip(String name, String notes, Date start_date, Date end_date, Integer id_type, Integer id_user, Integer id_destination, Integer number_traveller);
 
     @SqlUpdate("DELETE FROM trip WHERE id_trip = ?")
     Integer removeTrip(Integer idTrip);
+
+    @SqlUpdate("UPDATE trip SET name = ?, notes = ?, start_date = ?, end_date = ?, id_type = ?, id_destination = ?, number_traveller = ? WHERE id_trip = ?")
+    int updateTrip(String name, String notes, Date start_date, Date end_date, Integer id_type, Integer id_user, Integer id_destination, Integer number_traveller, int id_trip);
 }

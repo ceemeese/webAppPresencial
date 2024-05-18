@@ -1,3 +1,7 @@
+<%@ page import="com.svalero.webapppresencial.dao.Database" %>
+<%@ page import="com.svalero.webapppresencial.domain.Destination" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.svalero.webapppresencial.dao.DestinationDao" %>
 <%@include file="includes/header.jsp"%>
 <main>
 
@@ -19,7 +23,11 @@
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-
+                    <%
+                        Database.connect();
+                        List<Destination> destinations = Database.jdbi.withExtension(DestinationDao.class, dao-> dao.getAllDestinations());
+                        for (Destination destination : destinations) {
+                    %>
 
                     <div class="col">
                         <div class="card shadow-sm">
@@ -28,11 +36,11 @@
                                 <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
                             </svg>
                             <div class="card-body">
-                                <p class="card-text"></p>
+                                <p class="card-text"><%= destination.getCountry() %></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="view-destination.jsp" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
-                                        <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modify</a>
+                                        <a href="view-destination.jsp?idDestination=<%= destination.getIdDestination()%>" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
+                                        <a href="edit-destination.jsp?idDestination=<%= destination.getIdDestination()%>" type="button" class="btn btn-sm btn-outline-secondary">Modify</a>
                                         <a href="" type="button" class="btn btn-sm btn-outline-danger">Delete</a>
                                     </div>
                                     <small class="text-body-secondary"> </small>
@@ -40,6 +48,10 @@
                             </div>
                         </div>
                     </div>
+
+                    <%
+                        }
+                    %>
 
 
 

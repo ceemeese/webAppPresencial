@@ -1,3 +1,11 @@
+<%@ page import="com.svalero.webapppresencial.dao.Database" %>
+<%@ page import="com.svalero.webapppresencial.domain.User" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.svalero.webapppresencial.dao.UserDao" %>
+<%@ page import="com.svalero.webapppresencial.domain.Type" %>
+<%@ page import="com.svalero.webapppresencial.dao.TypeDao" %>
+<%@ page import="com.svalero.webapppresencial.domain.Destination" %>
+<%@ page import="com.svalero.webapppresencial.dao.DestinationDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="includes/header.jsp"%>
@@ -32,7 +40,16 @@
                     <label class="form-label" for="client">Client</label>
                     <select id="client" name="client" class="form-control">
 
-                        <option  value="">USUARIOOOOO</option>
+                        <%
+                            Database.connect();
+                            List<User> users = Database.jdbi.withExtension(UserDao.class, UserDao::getAllUsers);
+                            Database.close();
+                            for (User user : users) {
+                        %>
+                        <option value="<%= user.getIdUser() %>"><%= user.getName() %> <%= user.getSurname() %></option>
+                        <%
+                            }
+                        %>
 
                     </select>
                 </div>
@@ -56,7 +73,16 @@
                     <label class="form-label" for="typeTrip">Type Trip</label>
                     <select id="typeTrip" name="typeTrip" class="form-control">
 
-                        <option  value="">HOLAAAA</option>
+                        <%
+                            Database.connect();
+                            List<Type> types = Database.jdbi.withExtension(TypeDao.class, TypeDao::getAllTypes);
+                            Database.close();
+                            for (Type type : types) {
+                        %>
+                        <option value="<%= type.getIdType() %>"><%= type.getName() %></option>
+                        <%
+                            }
+                        %>
 
                     </select>
                 </div>
@@ -64,7 +90,16 @@
                     <label class="form-label" for="destination">Destination</label>
                     <select id="destination" name="destination" class="form-control">
 
-                        <option  value="">HOLAAAAAAAAA</option>
+                        <%
+                            Database.connect();
+                            List<Destination> destinations = Database.jdbi.withExtension(DestinationDao.class, DestinationDao::getAllDestinations);
+                            Database.close();
+                            for (Destination destination : destinations) {
+                        %>
+                        <option value="<%= destination.getIdDestination() %>"><%= destination.getCountry() %></option>
+                        <%
+                            }
+                        %>
 
                     </select>
                 </div>

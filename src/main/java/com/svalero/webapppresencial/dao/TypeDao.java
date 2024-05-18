@@ -15,11 +15,15 @@ public interface TypeDao {
 
     @SqlQuery("SELECT * FROM type WHERE id_type = ?")
     @UseRowMapper(TypeMapper.class)
-    Type getType(Integer idType);
+    Type getType (Integer id);
 
     @SqlUpdate("INSERT INTO type (name, description) VALUES (?,?)")
     Integer addType(String name, String description);
 
     @SqlUpdate("DELETE FROM type WHERE id_type = ?")
     Integer removeType(Integer idType);
+
+    @SqlUpdate("UPDATE type SET name = ?, description = ? WHERE id_type = ?")
+    int updateType(String name, String description, int id_type);
+
 }

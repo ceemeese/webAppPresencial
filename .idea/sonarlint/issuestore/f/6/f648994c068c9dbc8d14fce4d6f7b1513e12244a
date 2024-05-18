@@ -1,6 +1,12 @@
 
-g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Î—¯¨ıÿÿÿÿ
-[
-java:S1854"@Remove this useless assignment to local variable "affectedRows".(©°Í€úÿÿÿÿ
-L
-java:S1481"1Remove this unused "affectedRows" local variable.(©°Í€úÿÿÿÿ
+”	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Î—¯¨ıÿÿÿÿ8‚Û»Ùø1J$4001dc23-28dc-46d9-ab70-33226b93255e
+ƒ
+java:S1854&"@Remove this useless assignment to local variable "affectedRows".(±¯ÚĞ8™¼Ùø1J$25a7c3da-f954-4944-abac-0f5022d256ea
+‚
+java:S1854+"@Remove this useless assignment to local variable "affectedRows".(ÿ•úR8á™¾Ùø1J$20fb4039-e2dc-4cfb-8f2b-f40b76e4d248
+t
+java:S1481&"1Remove this unused "affectedRows" local variable.(±¯ÚĞ8›¼Ùø1J$fd45d8c9-47b9-4228-8f52-66597a0e26b9
+s
+java:S1481+"1Remove this unused "affectedRows" local variable.(ÿ•úR8ä™¾Ùø1J$73a953bf-54ef-4c3c-88c1-4f457d74ee9c
+
+java:S1128"LRemove this unused import 'com.svalero.webapppresencial.domain.Destination'.(ÃÛ¼8à©½Üø1J$3bf89548-9782-4f68-bd52-b89b0a59ba82
