@@ -29,9 +29,7 @@
                                        <p class="card-text mb-1"><strong>City: </strong>  </p>
                                        <p class="card-text mb-1"><strong>Description: </strong>   </p>
                                         <div>
-                                            <button type="button" class="btn btn-dark">
-                                                <i class="bi bi-plus-lg">Añadir</i>
-                                            </button>
+                                            <button type="button" class="btn btn-danger">Delete</button>
                                         </div>
                                 </div>
                             </div>

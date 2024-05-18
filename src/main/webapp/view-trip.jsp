@@ -32,7 +32,7 @@
                                        <p class="card-text mb-1"><strong>Destination: </strong> </p>
                                    </div>
                                     <div>
-                                        <button type="button" class="btn btn-dark">Delete</button>
+                                        <button type="button" class="btn btn-danger">Delete</button>
                                     </div>
                                 </div>
                             </div>
