@@ -34,7 +34,7 @@
           </tbody>
       </table>
 
-      <a href="" class="btn btn-success my-2">Add new trip</a>
+      <a href="edit-trip.jsp" class="btn btn-success my-2">Add new trip</a>
   </section>
 
 

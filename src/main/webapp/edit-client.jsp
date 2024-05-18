@@ -1,6 +1,3 @@
-<%@ page import="java.util.List" %>
-<%@ page import="com.svalero.webappcrud.dao.*" %>
-<%@ page import="com.svalero.webappcrud.domain.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="includes/header.jsp"%>
@@ -10,7 +7,7 @@
         $("form").on("submit", function(event) {
             event.preventDefault();
             var formValue = $(this).serialize();
-            $.post("edit-cat", formValue, function(data) {
+            $.post("edit-client", formValue, function(data) {
                 $("#result").html(data);
             });
         });
@@ -41,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row mt-1">
                 <div class="form-group col-md-6">
                     <label class="form-label" for="email">Email</label>
                     <input type="email" name="email" class="form-control" id="email" placeholder="Email" aria-describedby="emailHelp">
@@ -51,7 +48,7 @@
                     <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Mobile">
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-1">
                 <div class="form-group col-md-6">
                     <label class="form-label" for="address">Address</label>
                     <input type="text" name="address" class="form-control" id="address" placeholder="Address">
