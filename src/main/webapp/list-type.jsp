@@ -6,15 +6,14 @@
 
   <section class="py-5 text-center container">
 
-    <h1>Users</h1>
+    <h1>List's type</h1>
 
      <table id="example" class="table table-striped table-hover" style="width:100%">
         <thead>
             <tr>
               <th>#</th>
               <th>Name</th>
-              <th>Surname</th>
-              <th>Country</th>
+              <th>Description</th>
               <th></th>
             </tr>
         </thead>
@@ -23,8 +22,7 @@
               <td> </td>
               <td> </td>
               <td> </td>
-              <td> </td>
-              <td><a href="view-user.jsp" type="button" class="btn btn-sm btn-outline-secondary">Details</a>
+              <td>
                 <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modify</a>
                 <a href="" type="button" class="btn btn-sm btn-outline-danger">X</a>
               </td>
@@ -32,7 +30,7 @@
           </tbody>
       </table>
 
-      <a href="edit-client.jsp" class="btn btn-success my-2">Add new user</a>
+      <a href="edit-type.jsp" class="btn btn-success my-2">Add new trip</a>
   </section>
 
 

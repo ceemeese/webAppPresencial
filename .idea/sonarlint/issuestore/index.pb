@@ -73,3 +73,15 @@ N
 src/main/webapp/list-users.jsp,2/6/26aed5388597d6a0b042375217c7f10314dabcc0
 M
 src/main/webapp/view-user.jsp,b/d/bddde946359d09fafcedef2c42a715a2eeca30a6
+T
+$src/main/webapp/edit-destination.jsp,7/7/7748d31b115dfa4e1963e918a2c998b5ddbe710c
+O
+src/main/webapp/edit-client.jsp,c/6/c6941fbd9e9511abb787940f4494abdc13c27c2b
+M
+src/main/webapp/edit-trip.jsp,4/1/41392f9c10ca614f4836b5bd501ca068c5b5be3d
+M
+src/main/webapp/edit-type.jsp,9/8/98bf1b5c48a762cb6002323dedd26b4cf0a43933
+M
+src/main/webapp/list-type.jsp,a/f/aff79c19b1e7e33b973c2f7b3d2228ece2b3a9cf
+w
+Gsrc/main/java/com/svalero/webapppresencial/servlet/editDestination.java,f/6/f648994c068c9dbc8d14fce4d6f7b1513e12244a
