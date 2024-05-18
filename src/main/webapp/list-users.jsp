@@ -32,7 +32,7 @@
           </tbody>
       </table>
 
-      <a href="" class="btn btn-success my-2">Add new user</a>
+      <a href="edit-client.jsp" class="btn btn-success my-2">Add new user</a>
   </section>
 
 
