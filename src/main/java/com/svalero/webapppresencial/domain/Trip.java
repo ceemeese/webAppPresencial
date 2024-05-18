@@ -20,4 +20,5 @@ public class Trip {
     private User idUser;
     private Destination idDestination;
     private Integer numberTraveller;
+
 }

@@ -2,7 +2,6 @@ package com.svalero.webapppresencial.servlet;
 
 import com.svalero.webapppresencial.dao.Database;
 import com.svalero.webapppresencial.dao.TripDao;
-import com.svalero.webapppresencial.domain.Trip;
 import com.svalero.webapppresencial.util.DateUtils;
 
 import javax.servlet.ServletException;
@@ -32,23 +31,20 @@ public class editTrip extends HttpServlet {
             }
 
             String name = request.getParameter("name");
-            String notes = request.getParameter("notes");
-            //Date startDate = DateUtils.parse(request.getParameter("dateStart"));
-            //Date endDate = DateUtils.parse(request.getParameter("dateEnd"));
-            int idType = Integer.parseInt(request.getParameter("typeTrip"));
-            int idUser = Integer.parseInt(request.getParameter("user"));
-            int idDestination = Integer.parseInt(request.getParameter("destination"));
-            Integer numberTraveller = Integer.parseInt(request.getParameter("numberTraveller"));
+            String notes= request.getParameter("notes");
+            Date start = DateUtils.parse(request.getParameter("start"));
+            Date end = DateUtils.parse(request.getParameter("end"));
+            Integer numberTraveller= Integer.parseInt(request.getParameter("numberTraveller"));
 
             Database.connect();
-
             if ( id == 0) {
-                int affectedRows = Database.jdbi.withExtension(TripDao.class, dao -> dao.addTrip(name, notes, idType, idUser, idDestination, numberTraveller));
+                int affectedRows = Database.jdbi.withExtension(TripDao.class, dao -> dao.addTrip(name, notes, start, end,numberTraveller));
                 Database.close();
                 sendMessage("New trip added", response);
             } else {
                 final int finalID = id;
-                int affectedRows = Database.jdbi.withExtension(TripDao.class, dao -> dao.updateTrip(name, notes, idType, idUser, idDestination, numberTraveller, finalID));
+                int affectedRows = Database.jdbi.withExtension(TripDao.class,
+                        dao -> dao.updateTrip(name, notes, numberTraveller, finalID));
                 Database.close();
                 sendMessage("Trip modified", response);
             }
@@ -74,9 +70,10 @@ public class editTrip extends HttpServlet {
         }
 
         if (request.getParameter("notes").isBlank()) {
-            sendError("Input notes can't be empty", response);
+            sendError("Input description can't be empty", response);
             hasErrors = true;
         }
+
         return hasErrors;
     }
 

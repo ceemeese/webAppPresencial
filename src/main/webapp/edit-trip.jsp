@@ -1,8 +1,5 @@
-<%@ page import="com.svalero.webapppresencial.domain.User" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.svalero.webapppresencial.domain.Type" %>
-<%@ page import="com.svalero.webapppresencial.domain.Destination" %>
-<%@ page import="com.svalero.webapppresencial.domain.Trip" %>
+<%@ page import="com.svalero.webapppresencial.domain.*" %>
 <%@ page import="com.svalero.webapppresencial.dao.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -49,18 +46,16 @@
                 <div class="form-group col-md-6" >
                     <label class="form-label" for="user">Client</label>
                     <select id="user" name="user" class="form-control">
-
                         <%
                             Database.connect();
                             List<User> users = Database.jdbi.withExtension(UserDao.class, UserDao::getAllUsers);
                             Database.close();
                             for (User user : users) {
                         %>
-                        <option value="<%= user.getIdUser() %>"><%= user.getName() %> <%= user.getSurname() %></option>
+                        <option value="<%= user.getIdUser() %>"><%= user.getName() %></option>
                         <%
                             }
                         %>
-
                     </select>
                 </div>
             </div>
@@ -71,20 +66,19 @@
 
             <div class="row mt-1">
                 <div class="form-group col-md-6">
-                    <label for="dateStart" class="form-label">Start Date</label>
-                    <input type="date" name="dateStart" class="form-control" id="dateStart" placeholder="dd/mm/yyyy">
+                    <label for="start" class="form-label">Start Date</label>
+                    <input type="date" name="start" class="form-control" id="start" placeholder="dd/mm/yyyy">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="dateEnd" class="form-label">End Date</label>
-                    <input type="date" name="dateEnd" class="form-control" id="dateEnd" placeholder="dd/mm/yyyy">
+                    <label for="end" class="form-label">End Date</label>
+                    <input type="date" name="end" class="form-control" id="end" placeholder="dd/mm/yyyy">
                 </div>
             </div>
 
             <div class="row mt-1">
                 <div class="form-group col-md-6">
-                    <label class="form-label" for="typeTrip">Type Trip</label>
-                    <select id="typeTrip" name="typeTrip" class="form-control">
-
+                    <label class="form-label" for="type">Type Trip</label>
+                    <select id="type" name="type" class="form-control">
                         <%
                             Database.connect();
                             List<Type> types = Database.jdbi.withExtension(TypeDao.class, TypeDao::getAllTypes);
@@ -95,13 +89,11 @@
                         <%
                             }
                         %>
-
                     </select>
                 </div>
                 <div class="form-group col-md-6">
                     <label class="form-label" for="destination">Destination</label>
                     <select id="destination" name="destination" class="form-control">
-
                         <%
                             Database.connect();
                             List<Destination> destinations = Database.jdbi.withExtension(DestinationDao.class, DestinationDao::getAllDestinations);
@@ -112,7 +104,6 @@
                         <%
                             }
                         %>
-
                     </select>
                 </div>
                 <div class="form-group mt-1">

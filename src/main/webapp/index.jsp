@@ -25,18 +25,17 @@
 
                     <%
                         Database.connect();
-                        List<Destination> destinations = Database.jdbi.withExtension(DestinationDao.class, dao-> dao.getAllDestinations());
+                        List<Destination> destinations = Database.jdbi.withExtension(DestinationDao.class, DestinationDao::getAllDestinations);
                         for (Destination destination : destinations) {
                     %>
 
                     <div class="col">
                         <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <img src="avion.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
                                 <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
-                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                            </img>
                             <div class="card-body">
-                                <p class="card-text"><%= destination.getCountry() %></p>
+                                <p class="card-text"><%= destination.getCountry() %> - <%= destination.getCity() %></p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="view-destination.jsp?idDestination=<%= destination.getIdDestination()%>" type="button" class="btn btn-sm btn-outline-secondary">Details</a>

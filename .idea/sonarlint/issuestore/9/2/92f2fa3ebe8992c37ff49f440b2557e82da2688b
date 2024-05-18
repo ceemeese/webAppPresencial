@@ -1,17 +1,10 @@
 
-	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ŞÛˆ¥8˜Ş¹ãø1J$3cfc90ba-2ff2-48c9-a8ee-2d62113a80b4
-ƒ
-java:S1854."@Remove this useless assignment to local variable "affectedRows".(«Ñ¾¶8´Ş¹ãø1J$3eee231c-d2b1-44ab-8928-11305be0980d
-ƒ
-java:S18543"@Remove this useless assignment to local variable "affectedRows".( ¹Âï8´Ş¹ãø1J$2cdc3ffc-9629-4e76-b93b-49ddba4879b5
-~	java:S125$"<This block of commented-out lines of code should be removed.(‚í§Ô8¶Ş¹ãø1J$78f4d2ac-c9c3-4b26-825f-55095871d5e7
-t
-java:S1481."1Remove this unused "affectedRows" local variable.(«Ñ¾¶8·Ş¹ãø1J$eb3ca096-4b67-40b7-8043-dfe7047d82d4
-t
-java:S14813"1Remove this unused "affectedRows" local variable.( ¹Âï8¸Ş¹ãø1J$629299a2-b39a-4262-95bb-f3705d938e3d
-
-java:S1128"ERemove this unused import 'com.svalero.webapppresencial.domain.Trip'.(šÉã…øÿÿÿÿ8Éı½ãø1J$43651e17-21c3-49bc-86e3-1bda18ec1416
-
-java:S1128"HRemove this unused import 'com.svalero.webapppresencial.util.DateUtils'.(Êû¾êüÿÿÿÿ8Éı½ãø1J$c5917480-c7e8-4b76-8a7f-38b4ad14cc8d
-m
-java:S1128"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê8Êı½ãø1J$725987de-ff27-4e34-912e-c3d595f65ac9
+	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ŞÛˆ¥8Æ´­éø1J$e6599ae4-0054-47b2-9138-7b46b156dd34
+ˆ
+java:S1854)"@Remove this useless assignment to local variable "affectedRows".(Å±ª›ùÿÿÿÿ8Í´­éø1J$5e4af794-4242-43cf-a995-c98f55bcc02b
+ˆ
+java:S1854."@Remove this useless assignment to local variable "affectedRows".( ÍŸ÷üÿÿÿÿ8Í´­éø1J$d6df2f56-36c6-4b7c-9b3d-91ce4335788b
+y
+java:S1481)"1Remove this unused "affectedRows" local variable.(Å±ª›ùÿÿÿÿ8Ï´­éø1J$9ea923cf-7c03-4e0a-b4a4-e2ff18c1d6d6
+y
+java:S1481."1Remove this unused "affectedRows" local variable.( ÍŸ÷üÿÿÿÿ8Ğ´­éø1J$eaf5a041-0961-4e41-9eea-a08de05d4add

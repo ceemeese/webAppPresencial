@@ -103,3 +103,5 @@ r
 Bsrc/main/java/com/svalero/webapppresencial/servlet/removeTrip.java,b/f/bf6004230e7a3150f7e441f874776ff68819fc04
 r
 Bsrc/main/java/com/svalero/webapppresencial/servlet/removeType.java,a/9/a9bec2b83e47695d6db1cead90c8345ff9685bfb
+q
+Asrc/main/java/com/svalero/webapppresencial/servlet/editTrip2.java,2/6/26714772d0ea4df8beb78dd9c08372d5125258a7
